@@ -17,7 +17,7 @@
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  ko-kr
+lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
 title:                 Kihan Lee
@@ -90,8 +90,8 @@ paginate_path:         /blog/:num/
 # Theme
 # ---------------------------------------------------------------------------------------
 
-# theme: jekyll-theme-hydejack
-remote_theme: hydecorp/hydejack@v9.1.6
+remote_theme: jekyll-theme-hydejack
+#remote_theme: hydecorp/hydejack@v9
 
 
 # Customizaton
@@ -171,7 +171,7 @@ defaults:
         type:          WebPage
 
 kramdown:
-  math_engine:         mathjax #katex
+  math_engine:         katex
   math_engine_opts:    {}
   footnote_backlink:   '&#x21a9;&#xfe0e;'
 
@@ -276,15 +276,22 @@ hydejack:
   hide_last_modified:  false
 
   # Note that dark mode only works in the PRO version of Hydejack.
+  # dark_mode:
+  #   # Set to `true` to always use the dark theme.
+  #   always:            true
+
+  #   # Set to `true` to use the dark theme based on visitors' preference (OS setting).
+  #   dynamic:           false
+
+  #   # Set to `true` to allow visitors to switch between light and dark mode.
+  #   icon:              true
   dark_mode:
-    # Set to `true` to always use the dark theme.
-    always:            true
+    dynamic: false
+    sunrise: 6
+    sunset: 18
+    icon:    true
+    always:  true
 
-    # Set to `true` to use the dark theme based on visitors' preference (OS setting).
-    dynamic:           false
-
-    # Set to `true` to allow visitors to switch between light and dark mode.
-    icon:              true
 
   # ⚡️ DANGER ZONE ⚡️
   # ----------------
